@@ -10,7 +10,7 @@ public class MyMatrix {
 
 	}
 	
-	public static double[][] buildArrayfm() {
+	public static double[][] buildArrayMfm() {
 		int i = 0, j = 0;
 		Scanner sc = new Scanner(System.in);
 		do {
@@ -34,29 +34,36 @@ public class MyMatrix {
 					continue;
 				}
 		} while (true);
-		double[][] a = new double[i][j];
+		double[][] arr = new double[i][j];
 		System.out.println("Enter Matrix" + "["+ i + "*" + j+"]" + "by row e.g, a11 a12 a13...");
 		System.out.println("**leave a space between the number**");
 		System.out.println("**Press 'Enter' for next row**");
 		for(int n = 0; n < i; n++) {
 			System.out.print("R"+"["+ (n+1) +"]: ");
 			for(int m = 0; m < j; m++) {
-				a[n][m] = sc.nextInt();
+				arr[n][m] = sc.nextInt();
 			}
 		}
 		System.out.println();
-		return a;
+		return arr;
 	}
 	
 
-	public static void buildArrayfe() {
+	public static double[][] buildArrayMfe() {
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Please enter the number of equations in the system ==> ");
 		int no = sc.nextInt();
+		double[][] arr = new double[no][no+1];
 		for(int i = 0; i < no; i++) {
-			String eq = sc.nextLine();
-			
+			System.out.println("Equation "+ (i+1) +": ");
+			for(int j = 0; j < no; j++) {
+				System.out.print("Coefficient of X"+ (j+1) +" = ");
+				arr[i][j] = sc.nextDouble();; 
+			}
+			System.out.print("Ans. of Equation "+ (i+1) + " = ");
+			arr[i][no] = sc.nextDouble();
 		}
+		return arr;
 	}
 	
 	public static void printMatrixS(int[][] matrix) {
