@@ -6,7 +6,7 @@ public class MyGaussElim {
 		System.out.println("Matrix :");
 		MyMatrix.printMatrix(matrix);
 		System.out.println();
-		StepReduceRow(matrix);
+		solver(StepReduceRow(matrix));
 	}
 	
 	public static double[][] StepReduceRow(double[][] matrix) {
@@ -42,6 +42,11 @@ public class MyGaussElim {
 		return matrix;
 	}
 	
-	//public static double[][] solver(double[][] matrix) {
-	//}
+	public static void solver(double[][] matrix) {
+		double x4 = matrix[4-1][5-1]/matrix[4-1][4-1];
+		double x3 = (matrix[3-1][5-1]-matrix[3-1][4-1]*x4)/matrix[3-1][3-1];
+		double x2 = (matrix[2-1][5-1]-matrix[2-1][4-1]*x4-matrix[2-1][3-1]*x3)/matrix[2-1][2-1];
+		double x1 = (matrix[1-1][5-1]-matrix[1-1][4-1]*x4-matrix[1-1][3-1]*x3-matrix[1-1][2-1]*x2)/matrix[1-1][1-1];
+		System.out.println("Answer: x1 = "+x1+" x2 = "+x2 + " x3 = "+ x3+" x4 = "+ x4 );
+	}
 }
