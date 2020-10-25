@@ -8,7 +8,6 @@ public class MyGaussElim {
 		System.out.println();
 		solver(StepReduceRow(matrix));
 	}
-	
 	public static double[][] StepReduceRow(double[][] matrix) {
 		int count = 1;
 		double temp[] = new double[matrix[0].length];
