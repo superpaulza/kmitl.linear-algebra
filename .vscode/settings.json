@@ -1,3 +1,9 @@
 {
-    "editor.fontSize": 20
+    "editor.fontSize": 20,
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    }
 }
