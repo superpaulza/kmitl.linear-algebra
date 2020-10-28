@@ -2,7 +2,7 @@
 public class MyGaussElim {
 
 	public static void main(String[] args) {
-		double[][] matrix = {{2,3,-2,1,9},{4,8,1,4,1},{1,1,-2,1,9},{3,-2,5,-3,-2}};
+		//double[][] matrix = {{2,3,-2,1,9},{4,8,1,4,1},{1,1,-2,1,9},{3,-2,5,-3,-2}};
 		System.out.println("Matrix :");
 		MyMatrix.printMatrix(matrix);
 		System.out.println();
