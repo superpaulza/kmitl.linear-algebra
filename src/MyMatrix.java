@@ -9,7 +9,7 @@ public class MyMatrix {
 		// TODO Auto-generated method stub
 
 	}
-	
+
 	public static double[][] buildArrayMfm() {
 		int i = 0, j = 0;
 		Scanner sc = new Scanner(System.in);
